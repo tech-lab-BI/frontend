@@ -4,9 +4,21 @@
     <title>Variable</title>
 </head>
 <body>
-    
+    <h1></h1>
 <script>
     let name = 'Bikram';
+    document.querySelector('h1').innerText = name;
+    console.log(name);
+    
+    const gst = 15;
+    let bag = 0;
+    let jeans = 1300;
+    let shirt = 700;
+    bag = (jeans + shirt) + (100 + gst)/100;
+    console.log('final price : ' + bag);
+
+    console.log('45 + 30');
+    console.log(eval('45 + 30'));
 </script>
 </body>
 </html>
