@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cricket Game</h1>
+    <button onclick="
+        let cc = genarateChioce(); // try diff local veriable
+        alertMessage = showMessage('Bat', cc);
+    ">Bat</button>
+    <button onclick="
+        let cc2 = genarateChioce(); // try diff local veriable
+        alertMessage = showMessage('Wicket', cc2);
+    ">Wicket</button>
+    <button onclick="
+        let cc3 = genarateChioce(); // try diff local veriable
+        alertMessage = showMessage('Ball', cc3);
+    ">Ball</button>
+    <button onclick="alert(alertMessage);">Result</button>
+    <p>open console</p>
+
+<script>
+    let alertMessage = "You have not choose yet!!";
+    function genarateChioce(){
+        number_chioce = Math.random() * 3;
+        if(number_chioce <= 1){
+            ch = 'Bat'; // default intialize without let / const / var
+        } else if(number_chioce <= 2){
+            ch = 'Wicket';
+        } else{
+            ch = 'Ball';
+        }
+        return ch;
+    }
+    function showMessage(u, c){
+        console.log(`User choose : ${u}`);
+        console.log(`Computer choose : ${c}`);
+        let printMessage;
+        if(u === c){
+            printMessage = 'Match Draw !!!';
+        } else if((u === 'Bat' && c === 'Ball') || (u === 'Ball' && c === 'Wicket') || (u === 'Wicket' && c === 'Bat')){
+            printMessage = 'User Win !!!';
+        } else {
+            printMessage = 'Computer Win !!!';
+        }
+        return printMessage
+    }
+</script>
+</body>
+</html>
