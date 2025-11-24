@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Function</title>
+</head>
+<body>
+    <p>open console</p>
+    <script>
+        function isOdd(x){
+            return (x%2==0)?true:false;
+        }
+        function larger(a, b){
+            return (a > b)?a:b;
+        }
+        function CtoF(x){
+            let temp = (9/5)*x + 32;
+            return temp;
+        }
+
+        console.log(isOdd(3));
+        console.log(isOdd(40));
+        console.log(larger(2, 3));
+        console.log(larger(4, 1));
+        console.log(CtoF(46));
+        console.log(CtoF(33));
+    </script>
+</body>
+</html>
