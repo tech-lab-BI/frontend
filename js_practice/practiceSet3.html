@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic Button function</title>
+    <style>
+        #idc{
+            background-color: blueviolet;
+        }
+        .clc{
+            background-color: chocolate;
+        }
+        #bag{
+            padding: 5px;
+            width: 100px;
+            background-color: lightgreen;
+            border: none;
+            border-radius: 5px;
+        }
+        #list{
+            padding: 5px;
+            width: 150px;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <button>click</button>
+        <button id="idc">click id</button>
+        <button class="clc">click class</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quaerat.</p>
+        <hr>
+        <button id="bag" onclick="
+            alert('item added to Bag');
+        ">Add to Bag</button>
+        <button id="list" onclick="
+            alert('item added to Wishlist');
+        ">WISHLIST</button>
+    </main>
+    <footer></footer>
+    <script>
+        alert('WELCOME');
+    </script>
+</body>
+</html>
