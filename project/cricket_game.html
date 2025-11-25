@@ -22,10 +22,18 @@
         let cc3 = genarateChioce(); // try diff local veriable
         alertMessage = showMessage('Ball', cc3);
     ">Ball</button>
-    <button onclick="alert(alertMessage);">Result</button>
+    <button onclick="
+        alert(alertMessage);
+        console.log(score);
+    ">Result</button>
     <p>open console</p>
 
 <script>
+    let score = {
+        win : 0,
+        lost : 0,
+        draw : 0,
+    };
     let alertMessage = "You have not choose yet!!";
     function genarateChioce(){
         number_chioce = Math.random() * 3;
@@ -44,10 +52,13 @@
         let printMessage;
         if(u === c){
             printMessage = 'Match Draw !!!';
+            score.draw++;
         } else if((u === 'Bat' && c === 'Ball') || (u === 'Ball' && c === 'Wicket') || (u === 'Wicket' && c === 'Bat')){
             printMessage = 'User Win !!!';
+            score.win++;
         } else {
             printMessage = 'Computer Win !!!';
+            score.lost++;
         }
         return printMessage
     }
