@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object</title>
+</head>
+<body>
+    <p>open console</p>
+    <script>
+        product = {
+            name : 'Dress',
+            price : 300,
+            tag : 'fashion',
+            brand : 'Myntra',
+            'delivary-time' : '7pm',
+        };
+
+        item1 = {
+            name : 'pant',
+            price : 3400,
+        };
+        item2 = item1;
+        console.log(item1);
+        console.log(item2);
+        item2.price = 555;
+        console.log(item1);
+        console.log(item2);
+
+        console.log(product['delivary-time']);
+
+        let object = { //destructure
+            message: 'good job',
+            status: 'complete',
+        };
+        let {message, status} = object;
+        // let {status} = object;
+        console.log(message);
+        console.log(status);
+
+
+
+
+
+        newProduct = {
+            name : 'saree',
+            price : 300,
+            tag : 'fashion',
+            brand : 'Myntra',
+            'delivary-time' : '7pm',
+        };
+
+        function isIdenticalProduct(prod1, prod2){
+            if(typeof prod1 !== 'object' || typeof prod2 !== 'object'){
+                console.warn('parameter is not an object!!!');
+                return false;
+            } else if(prod1 == prod2){
+                return true;
+            } else if(prod1.name === prod2.name && prod1.price === prod2.price && prod1.tag === prod2.tag && prod1.brand === prod2.brand){
+                return true;
+            } else{
+                return false;
+            }
+
+        }
+
+        console.log(isIdenticalProduct(item1, item2));
+        console.log(isIdenticalProduct(product, newProduct));
+        console.log(isIdenticalProduct(product, product));
+        console.log(isIdenticalProduct(10, product));
+    </script>
+</body>
+</html>
