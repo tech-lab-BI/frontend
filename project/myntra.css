@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #f8f5f5;
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+#logo{
+    width: 53px;
+    height: 80px;
+    margin: 0px 0px 0px 20px;
+}
+img{
+    width: 55px;
+    height: 38px;
+    margin-top: 21px;
+}
+#menu{
+    display: flex;
+}
+.menu{
+    width: 70px;
+    height: 80px;
+    margin-top: 30px;
+    padding: 0px 1px 28px;
+    font: 14px Assistant;
+}
+#stdio{
+    margin-top: 28px;
+}
+sup{
+    color: red;
+    font: 10px assistant;
+}
+#searchbox{
+    display: flex;
+}
+input{
+    width: 116px;
+    height: 40px;
+    padding: 8px 10px 10px;
+    margin: 20px 0px;
+}
+#search_icon{
+    width: 41px;
+    height: 40px;
+    background-color: #f5f5f6;
+    padding: 8px 0px 2px;
+}
+#s{
+    width: 30px;
+    height: 30px;
+}
+/* #option{
+    
+} */
