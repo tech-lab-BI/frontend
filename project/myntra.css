@@ -1,61 +1,113 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
-header{
-    width: 100%;
+header {
     height: 80px;
-    background-color: #f8f5f5;
     display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    align-items: center;
 }
-#logo{
-    width: 53px;
-    height: 80px;
-    margin: 0px 0px 0px 20px;
+.logo a img {
+    width: 56px;
+    margin-left: 50%;
 }
-img{
-    width: 55px;
-    height: 38px;
-    margin-top: 21px;
-}
-#menu{
+nav {
+    width: 600px;
     display: flex;
+    justify-content: space-evenly;
+    
 }
-.menu{
-    width: 70px;
-    height: 80px;
-    margin-top: 30px;
-    padding: 0px 1px 28px;
-    font: 14px Assistant;
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    color: #282c3f;
+    font-weight: 650;
 }
-#stdio{
-    margin-top: 28px;
+nav a sup {
+    font-size: 70%;
+    color: #ff3f6c;
 }
-sup{
-    color: red;
-    font: 10px assistant;
-}
-#searchbox{
-    display: flex;
-}
-input{
-    width: 116px;
-    height: 40px;
-    padding: 8px 10px 10px;
-    margin: 20px 0px;
-}
-#search_icon{
-    width: 41px;
+.search_bar {
+    width: 350px;
     height: 40px;
     background-color: #f5f5f6;
-    padding: 8px 0px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
 }
-#s{
+.search_bar .search_icon {
     width: 30px;
-    height: 30px;
+    padding: 2px 0px 2px 6px;
 }
-/* #option{
-    
-} */
+.search_bar input {
+    flex-grow: 1;
+    background-color: #f5f5f6;
+    border: none;
+}
+.action {
+    margin-right: 4%;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.action div {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #000;
+    font-weight: 700;
+}
+
+/*main section*/
+/* write css for main section*/
+
+/* footer section */
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    color: #282c3f;
+    font-weight: 700;
+    font-size: 15px;
+}
+.links a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #696b79;
+    font-weight: 500;
+    font-size: 13px;
+}
+.searches {
+    text-transform: uppercase;
+    color: #282c3f;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 2%;
+}
+.searches .items {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #696b79;
+    font-weight: 500;
+    font-size: 13px;
+}
+.brand {
+    margin-left: 5%;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.copyright {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+.copyright span a {
+    text-decoration: none;
+    font-weight: 500;
+}
