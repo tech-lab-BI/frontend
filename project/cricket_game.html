@@ -3,8 +3,23 @@
 <head>
     <title>Cricket Game</title>
     <style>
-        body{
+        body {
             text-align: center;
+
+            height: 500px;
+            background-image: url(images/cricket-background.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: rgb(240, 241, 246);
+        }
+        img {
+            width: 100px;
+            height: 120px;
+            margin: 10px;
+        }
+        button {
+            background-color: aqua;
         }
     </style>
 </head>
@@ -13,20 +28,24 @@
     <button onclick="
         updateScore('Bat');
         display();
-    ">Bat</button>
-    <button onclick="
-        updateScore('Wicket');
-        display();
-    ">Wicket</button>
+    "><img src="images/bat.jpg"></button>
+
     <button onclick="
         updateScore('Ball');
         display();
-    ">Ball</button>
+    "><img src="images/ball.webp"></button>
+
+    <button onclick="
+        updateScore('Wicket');
+        display();
+    "><img src="images/wicket.jpg"></button>
+
     <button onclick="
         score.win=score.lost=score.draw=0;
         localStorage.setItem('score',JSON.stringify(score));//if score already exist make change it
         display();
-    ">Reset Result</button>
+    "><img src="images/reset.webp"></button>
+    
     <h4 id="win-result">Match Yet to Begin, choose option</h4>
     <h4 id="loss-result"></h4>
     <h4 id="draw-result"></h4>
