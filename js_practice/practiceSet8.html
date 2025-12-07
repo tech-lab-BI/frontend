@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON, Local Storage, Date, DOM</title>
+</head>
+<body>
+    open console
+    <script>
+        let obj = {
+            name : "Bikram",
+            age : 20,
+            hight : '130cm',
+        }
+        console.log(typeof obj);
+        console.log(obj);
+        let str = JSON.stringify(obj);
+        console.log(typeof str);
+        console.log(str);
+        let newObj = JSON.parse(str);
+        console.log(typeof newObj);
+        console.log(newObj);
+        console.log('Local Storage----------------------');
+        localStorage.setItem('name',"BIki");
+        localStorage.setItem('object',obj);
+        localStorage.setItem('newObject', str);
+        console.log(localStorage.getItem('name'));
+        console.log(localStorage.getItem('object'));
+        console.log(localStorage.getItem('newObject'));
+        localStorage.removeItem('name');
+        localStorage.clear();
+    </script>
+</body>
+</html>
