@@ -11,25 +11,26 @@
 <body>
     <h1>Cricket Game</h1>
     <button onclick="
-        let cc = genarateChioce(); // try diff local veriable
-        alertMessage = showMessage('Bat', cc);
+        updateScore('Bat');
+        display();
     ">Bat</button>
     <button onclick="
-        let cc2 = genarateChioce(); // try diff local veriable
-        alertMessage = showMessage('Wicket', cc2);
+        updateScore('Wicket');
+        display();
     ">Wicket</button>
     <button onclick="
-        let cc3 = genarateChioce(); // try diff local veriable
-        alertMessage = showMessage('Ball', cc3);
+        updateScore('Ball');
+        display();
     ">Ball</button>
     <button onclick="
-        alert(localStorage.getItem('score'));
-    ">Result</button>
-    <button onclick="
         score.win=score.lost=score.draw=0;
-        localStorage.setItem('score',JSON.stringify(score));
+        localStorage.setItem('score',JSON.stringify(score));//if score already exist make change it
+        display();
     ">Reset Result</button>
-    <p>open console</p>
+    <h4 id="win-result">Match Yet to Begin, choose option</h4>
+    <h4 id="loss-result"></h4>
+    <h4 id="draw-result"></h4>
+    <p>open console for check comparism</p>
 
 <script>
     let score = JSON.parse(localStorage.getItem('score')) || {
@@ -49,7 +50,9 @@
         }
         return ch;
     }
-    function showMessage(u, c){
+
+    function updateScore(u){
+        let c = genarateChioce();
         console.log(`User choose : ${u}`);
         console.log(`Computer choose : ${c}`);
         let printMessage;
@@ -63,10 +66,17 @@
             printMessage = 'Computer Win !!!';
             score.lost++;
         }
-        localStorage.setItem('score',JSON.stringify(score));
-        return printMessage
+        localStorage.setItem('score', JSON.stringify(score));
+    }
+
+    function display(){
+        let s = JSON.parse(localStorage.getItem('score'));
+        document.querySelector('#win-result').innerText = `User Win ${s.win} times.`;
+        document.querySelector('#loss-result').innerText = `User loss ${s.lost} times.`;
+        document.querySelector('#draw-result').innerText = `Match Draw ${s.draw} times.`;
     }
     
+    // localStorage.clear();
 </script>
 </body>
 </html>
