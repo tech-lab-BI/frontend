@@ -5,6 +5,8 @@
 </head>
 <body>
     open console
+
+    <h1></h1>
     <script>
         let obj = {
             name : "Bikram",
@@ -13,14 +15,14 @@
         }
         console.log(typeof obj);
         console.log(obj);
-        let str = JSON.stringify(obj);
+        let str = JSON.stringify(obj);   //json
         console.log(typeof str);
         console.log(str);
         let newObj = JSON.parse(str);
         console.log(typeof newObj);
         console.log(newObj);
         console.log('Local Storage----------------------');
-        localStorage.setItem('name',"BIki");
+        localStorage.setItem('name',"BIki");      //localstorage
         localStorage.setItem('object',obj);
         localStorage.setItem('newObject', str);
         console.log(localStorage.getItem('name'));
@@ -28,6 +30,14 @@
         console.log(localStorage.getItem('newObject'));
         localStorage.removeItem('name');
         localStorage.clear();
+
+        let d = new Date();                         //date
+        console.log(d.getDate());
+        console.log(d.getDay());
+        console.log(d.getFullYear());
+
+        document.title = 'Hello';                      //DOM
+        document.querySelector('h1').innerText = 'Hello programmers...';
     </script>
 </body>
 </html>
