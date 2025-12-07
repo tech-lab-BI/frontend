@@ -23,13 +23,16 @@
         alertMessage = showMessage('Ball', cc3);
     ">Ball</button>
     <button onclick="
-        alert(alertMessage);
-        console.log(score);
+        alert(localStorage.getItem('score'));
     ">Result</button>
+    <button onclick="
+        score.win=score.lost=score.draw=0;
+        localStorage.setItem('score',JSON.stringify(score));
+    ">Reset Result</button>
     <p>open console</p>
 
 <script>
-    let score = {
+    let score = JSON.parse(localStorage.getItem('score')) || {
         win : 0,
         lost : 0,
         draw : 0,
@@ -60,8 +63,10 @@
             printMessage = 'Computer Win !!!';
             score.lost++;
         }
+        localStorage.setItem('score',JSON.stringify(score));
         return printMessage
     }
+    
 </script>
 </body>
 </html>
