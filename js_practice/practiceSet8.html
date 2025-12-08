@@ -2,42 +2,66 @@
 <html lang="en">
 <head>
     <title>JSON, Local Storage, Date, DOM</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        #count-button {
+            height: 60px;
+            width: 80px;
+
+        }
+        #reset-button {
+            height: 30px;
+            width: 50px;
+        }
+        .js-odd{
+            background-color: beige;
+        }
+        .js-even {
+            background-color: cadetblue;
+        }
+    </style>
 </head>
 <body>
-    open console
-
-    <h1></h1>
+    <h3></h3>
+    <button id="count-button" onclick="
+        c++;
+        setANDdisplay();
+    "></button>
+    <button id="reset-button" onclick="
+        c=0;
+        setANDdisplay(); 
+    ">reset</button>
     <script>
-        let obj = {
-            name : "Bikram",
-            age : 20,
-            hight : '130cm',
+        function doGreeting(name){
+            let d = new Date();
+            let gretting = document.querySelector('h3');
+            if(d.getHours < 12){
+                gretting.innerText = `Good Morning, ${name}`;
+            } else if(d.getHours < 17){
+                gretting.innerText = `Good Afternoon, ${name}`;
+            } else {
+                gretting.innerText = `Good Night, ${name}`;
+            }
         }
-        console.log(typeof obj);
-        console.log(obj);
-        let str = JSON.stringify(obj);   //json
-        console.log(typeof str);
-        console.log(str);
-        let newObj = JSON.parse(str);
-        console.log(typeof newObj);
-        console.log(newObj);
-        console.log('Local Storage----------------------');
-        localStorage.setItem('name',"BIki");      //localstorage
-        localStorage.setItem('object',obj);
-        localStorage.setItem('newObject', str);
-        console.log(localStorage.getItem('name'));
-        console.log(localStorage.getItem('object'));
-        console.log(localStorage.getItem('newObject'));
-        localStorage.removeItem('name');
-        localStorage.clear();
+        doGreeting('Bikram');
 
-        let d = new Date();                         //date
-        console.log(d.getDate());
-        console.log(d.getDay());
-        console.log(d.getFullYear());
-
-        document.title = 'Hello';                      //DOM
-        document.querySelector('h1').innerText = 'Hello programmers...';
+        let c = localStorage.getItem('count') || 0;
+        setANDdisplay();
+        function setANDdisplay() {
+            localStorage.setItem('count' , c); //store
+            let count_button = document.querySelector('#count-button');
+            count_button.innerText = `${c} times clicked.`;
+            if(c%2 === 0){
+                count_button.classList.add('js-even');
+                count_button.classList.remove('js-odd');
+            } else {
+                count_button.classList.add('js-odd');
+                count_button.classList.remove('js-even');
+            }
+        }
+        // localStorage.clear();
     </script>
 </body>
 </html>
