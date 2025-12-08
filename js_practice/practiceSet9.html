@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array & Loop</title>
+</head>
+<body>
+    open console
+    <script>
+        let arr = [5, 6];
+        console.log(arr);
+        arr.unshift(4); // insert at begining
+        console.log(arr);
+        arr.push(7); // insert at end
+        console.log(arr);
+
+        function getElement(pos){
+            return arr[pos-1];
+        }
+        console.log(getElement(3));
+
+        // let arr = [3, 6, 8, 9, 4, 5];
+        let arr2 = arr.slice(2, 5);
+        console.log(arr);
+        console.log(arr2);
+
+        function isPrime(num){
+            for(i=2;i<num/2;i++){
+                if(num%i === 0)
+                    return false;
+            }
+            return true;
+        }
+        let num = 2;
+        let count=0;
+        while(true){
+            if(count === 5) break;
+            if(isPrime(num)){
+                console.log(num);
+                count++;
+            }
+            num++;
+        }
+
+        for(let i=10;i>0;i--){
+            console.log(i);
+        }
+
+        let arr3 = [1, -6, 5, 7, -98];
+        for(let i=0;i<arr3.length;i++){
+            if(arr3[i] < 0){
+                continue;
+            }
+            console.log(arr3[i]);
+        }
+
+        // let arr = ['I\'m', 'learning', 'JavaScript', 'Course', 'from', 'Youtube']; //accumulator pattern
+        let result = arr[0];
+        for(let i=1;i<arr.length;i++){
+            // result += arr[i];
+            result += ' ' + arr[i];
+        }
+        // let result = arr.join(' ');// optional
+        console.log(result);
+        
+
+    </script>
+</body>
+</html>

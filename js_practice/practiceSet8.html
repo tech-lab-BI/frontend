@@ -15,7 +15,7 @@
             height: 30px;
             width: 50px;
         }
-        .js-odd{
+        .js-odd{ /*use for js*/
             background-color: beige;
         }
         .js-even {
@@ -54,7 +54,7 @@
             let count_button = document.querySelector('#count-button');
             count_button.innerText = `${c} times clicked.`;
             if(c%2 === 0){
-                count_button.classList.add('js-even');
+                count_button.classList.add('js-even'); //connect css
                 count_button.classList.remove('js-odd');
             } else {
                 count_button.classList.add('js-odd');
