@@ -62,10 +62,73 @@ nav a sup {
     font-weight: 700;
 }
 
-/*main section*/
+/*main section -----------------------------------------------------------------*/
+.item-container{
+    margin: 2% 3%;
+    display: flex;
+}
+.item{
+    width: 15%;
+    padding: 1%;
+}
+.item-image{
+    width: 100%;
+}
+.rating{
+    font-size: 12px;
+    font-weight: 700;
+}
+.company-name{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #282c3f;
+    margin-bottom: 6px;
+}
+.product-name{
+    color: #535766;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 400;
+}
+.price{
+    font-size: 14px;
+    line-height: 15px;
+    color: #282c3f;
+    font-weight: 700;
+}
+.current-price{
+    font-size: 14px;
+    font-weight: 700;
+    color: #282c3f;
+}
+.orginal-price{
+    text-decoration: line-through;
+    color: #7e818c;
+    font-weight: 400;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.discount{
+    color: #ff905a;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.btn-add-bag{
+    margin-top: 5%;
+    padding: 5px;
+    width: 100%;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
 
-
-/* footer section */
+/* footer section --------------------------------------------------------------------------*/
 .links {
     display: flex;
     justify-content: space-evenly;
