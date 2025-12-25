@@ -2,33 +2,54 @@
 <html lang="en">
 <head>
     <title>Document</title>
-    <!-- <style>
+    <style>
         .b{
-            display: flex;
-            flex-grow: 1;
-            background-color: blue;
+            height: 40px;
+            width: 120px;
+            background-color: rgb(136, 136, 161);
         }
-    </style> -->
+        .js-btn-action{
+            height: 80px;
+            width: 200px;
+            background-color: rgb(86, 181, 88);
+        }
+    </style>
 </head>
     <body>
-        <button id="b">click me</button>
+        <button class="b" onclick="// buttonAction()">click me</button>
     </body>
     <script>
         let multiply = (n1, n2) => n1*n2;           //1
         console.log(multiply(2,3));
 
         let display = () => console.log("Hello");   //2
-        function runTwice(){
-            for(let i=1;i<=2;i++){
-                display();
-            }
+        function runTwice(inputFunction){//function pass as parameter
+            inputFunction();
+            inputFunction();
         }
-        runTwice();
+        runTwice(display);
 
-        let but = document.querySelector('#b');     //3
+        let but = document.querySelector('.b');     //3
         function buttonAction(){
-            
+            but.innerText = 'loading..2sec';
+            let nF = () => {
+                but.classList.add('js-btn-action');
+                but.innerText = 'Habibi, Welcome to Dubai.';
+            }
+            setTimeout(nF, 2000);//waiting for 2sec
         }
-        but.addEventListener('click',buttonAction);
+
+        but.addEventListener('mouseover',buttonAction);   //4
+
+        let arr = [1,2,3,4,5,6];                          //5
+        let s=0;
+        // function sum(n){
+        //     s+=n;
+        // }
+        arr.forEach(n => s+=n); //sum(n)
+        console.log(s);
+
+        let a2 = arr.map(n => n*n);                        //6
+        console.log(a2);
     </script>
 </html>
