@@ -61,24 +61,40 @@ nav a sup {
     color: #000;
     font-weight: 700;
 }
+.action .bag-Count {
+    background-color: #f16565;
+    padding: 0 6px;
+    position: relative;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    left: -12px;
+    top: -28px;
+    font-weight: 700;
+}
 
 /*main section -----------------------------------------------------------------*/
 .item-container{
-    margin: 2% 3%;
+    /* margin: 2% 3%; */
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .item{
-    width: 15%;
-    padding: 1%;
+    width: 200px;
+    margin: 20px;
+    padding: 2px;
 }
 .item-image{
     width: 100%;
 }
 .rating{
+    height: 20px;
     font-size: 12px;
     font-weight: 700;
 }
 .company-name{
+    height: 30px;
     font-size: 16px;
     font-weight: 700;
     line-height: 1;
@@ -86,6 +102,7 @@ nav a sup {
     margin-bottom: 6px;
 }
 .product-name{
+    height: 40px;
     color: #535766;
     font-size: 14px;
     line-height: 1;
@@ -94,6 +111,7 @@ nav a sup {
     font-weight: 400;
 }
 .price{
+    height: 20px;
     font-size: 14px;
     line-height: 15px;
     color: #282c3f;
